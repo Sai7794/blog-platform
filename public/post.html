@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Read article details, comments, and join the conversation.">
+  <title>Read Post | Aura Blog</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="container">
+    <nav class="navbar glass">
+      <a href="index.html" class="logo">
+        AURA<span class="logo-dot"></span>BLOG
+      </a>
+      <ul class="nav-links" id="navbar-auth-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="login.html" class="btn btn-secondary">Login</a></li>
+        <li><a href="register.html" class="btn btn-primary">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Post Detail Content -->
+  <main class="container">
+    <article class="post-detail-wrapper">
+      <header class="post-detail-header">
+        <div class="post-detail-tags" id="post-tags">
+          <!-- Rendered dynamically -->
+        </div>
+        <h1 class="post-detail-title" id="post-title">Loading post title...</h1>
+        <div class="post-detail-meta">
+          <div class="author-info">
+            <div class="avatar" id="author-avatar">-</div>
+            <span id="post-author">Loading author...</span>
+          </div>
+          <span style="opacity: 0.3;">|</span>
+          <span id="post-date">Loading date...</span>
+        </div>
+      </header>
+
+      <img src="" alt="Post cover image" class="post-detail-banner" id="post-banner" style="display: none;">
+
+      <section class="post-detail-body" id="post-body">
+        <p style="text-align: center; color: var(--text-muted);">Fetching article content...</p>
+      </section>
+
+      <!-- Post Edit/Delete Action Panel (Only for Author) -->
+      <div class="post-actions" id="post-actions">
+        <!-- Rendered dynamically -->
+      </div>
+    </article>
+
+    <!-- Comments Section -->
+    <section class="comments-section">
+      <h3 class="comments-title">
+        Discussion (<span id="comments-count">0</span>)
+      </h3>
+
+      <!-- Add Comment Form Card -->
+      <div class="comment-form-card glass" id="comment-form-container" style="display: none;">
+        <h4 class="comment-form-title">Join the discussion</h4>
+        <form id="comment-form">
+          <div class="form-group comment-input-wrapper">
+            <textarea id="comment-input" rows="4" required placeholder="Share your perspective, ask a question, or leave feedback..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="margin-top: 12px;">
+            Post Comment
+          </button>
+        </form>
+      </div>
+
+      <!-- Comments List -->
+      <div class="comments-list" id="comments-list">
+        <!-- Comments rendered dynamically -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Aura Blog. Built with passion by <a href="#">Antigravity</a>.</p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/api.js"></script>
+  <script src="js/post-detail.js"></script>
+</body>
+</html>

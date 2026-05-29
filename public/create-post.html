@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Write and publish a new post or edit your existing post on Aura Blog.">
+  <title>Write Post | Aura Blog</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="container">
+    <nav class="navbar glass">
+      <a href="index.html" class="logo">
+        AURA<span class="logo-dot"></span>BLOG
+      </a>
+      <ul class="nav-links" id="navbar-auth-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="login.html" class="btn btn-secondary">Login</a></li>
+        <li><a href="register.html" class="btn btn-primary">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Create Post Section -->
+  <main class="container create-post-wrapper">
+    <div class="create-post-card glass">
+      <h2 class="create-post-title" id="page-title">Publish New Article</h2>
+
+      <form id="post-form">
+        <div class="form-group">
+          <label for="post-title-input">Article Title</label>
+          <input type="text" id="post-title-input" required placeholder="Catchy title for your article" maxlength="100">
+        </div>
+
+        <div class="form-group">
+          <label for="post-cover-input">Cover Image URL (Optional)</label>
+          <input type="url" id="post-cover-input" placeholder="https://images.unsplash.com/photo-...">
+        </div>
+
+        <div class="form-group">
+          <label for="post-tags-input">Tags (comma separated)</label>
+          <input type="text" id="post-tags-input" placeholder="technology, webdev, lifestyle">
+        </div>
+
+        <div class="form-group">
+          <label for="post-content-input">Article Body</label>
+          <textarea id="post-content-input" rows="12" required placeholder="Write your post contents here. Use double line breaks to form new paragraphs..."></textarea>
+        </div>
+
+        <div style="display: flex; gap: 12px; justify-content: flex-end; margin-top: 32px;">
+          <a href="index.html" class="btn btn-secondary">Cancel</a>
+          <button type="submit" id="submit-btn" class="btn btn-primary">Publish Article</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Aura Blog. Built with passion by <a href="#">Antigravity</a>.</p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/api.js"></script>
+  <script src="js/create-post.js"></script>
+</body>
+</html>

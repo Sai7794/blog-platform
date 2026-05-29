@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Register a new account on Aura Blog to start writing posts.">
+  <title>Sign Up | Aura Blog</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="container">
+    <nav class="navbar glass">
+      <a href="index.html" class="logo">
+        AURA<span class="logo-dot"></span>BLOG
+      </a>
+      <ul class="nav-links" id="navbar-auth-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="login.html" class="btn btn-secondary">Login</a></li>
+        <li><a href="register.html" class="btn btn-primary active">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Register Card Section -->
+  <main class="container auth-wrapper">
+    <div class="auth-card glass">
+      <div class="auth-header">
+        <h2>Create Account</h2>
+        <p>Get started today by registering your new profile</p>
+      </div>
+
+      <form id="register-form">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" required placeholder="John Doe">
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" required placeholder="john@domain.com">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" required placeholder="Min 6 characters">
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" required placeholder="Repeat password">
+        </div>
+        <button type="submit" class="btn btn-primary auth-btn">Sign Up</button>
+      </form>
+
+      <div class="auth-footer">
+        Already have an account? <a href="login.html">Sign in instead</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Aura Blog. Built with passion by <a href="#">Antigravity</a>.</p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
